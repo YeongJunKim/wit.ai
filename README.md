@@ -1,5 +1,7 @@
 # api_wit_ai
 
+support raspberry pi
+
 
 1. install AIY-Kit https://aiyprojects.withgoogle.com/voice/
 
