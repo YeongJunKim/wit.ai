@@ -2,5 +2,6 @@
 
 
 
+1. install pywit. url https://github.com/wit-ai/pywit
 
-test
+2. 
