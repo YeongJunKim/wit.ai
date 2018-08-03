@@ -12,7 +12,6 @@ from wit import Wit
 import signal
 import time
 
-
 class Timeout():
     class Timeout(Exception):
         pass
@@ -25,8 +24,6 @@ class Timeout():
         signal.alarm(0)
     def raise_timeout(self, *args):
         raise Timeout.Timeout()
-
-
 
 logging.basicConfig(
     level=logging.INFO,
@@ -49,9 +46,7 @@ def main():
             play_sound.playAudioText('press button and speak')
             button.wait_for_press()
 
-            print("hello1")
             text, audio = assistant.recognize()
-
 
             if text:
                 logger.info('recognize text is : %s ',text)

@@ -4,7 +4,6 @@ import aiy.audio
 
 def mqtt(topic,msg):
     print("-------------------------mqtt manager on")
-    #aiy.audio.play_wave('/home/pi/Pycham/0000_test/voice_files/voice_ok.wav')
     import paho.mqtt.client as mqtt
 
     mqttc = mqtt.Client("python_pub")
