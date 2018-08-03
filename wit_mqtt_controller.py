@@ -11,8 +11,6 @@ logging.basicConfig(
 logger = logging.getLogger('INFO')
 
 def main():
-
-
     while True:
         access_token = '66665YBMQQL64GNF6PJV7OGWBFBQGI56'
         client = Wit(access_token)
