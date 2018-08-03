@@ -1,7 +1,5 @@
 import sys
-
 sys.path.insert(0, './home/pi/AIY-projects-python/src/aiy')
-
 import logging
 import json_manager
 import aiy.assistant.grpc
@@ -10,6 +8,25 @@ import aiy.voicehat
 import play_sound
 
 from wit import Wit
+
+import signal
+import time
+
+
+class Timeout():
+    class Timeout(Exception):
+        pass
+    def __init__(self, sec):
+        self.sec = sec
+    def __enter__(self):
+        signal.signal(signal.SIGALRM, self.raise_timeout)
+        signal.alarm(self.sec)
+    def __exit__(self, *args):
+        signal.alarm(0)
+    def raise_timeout(self, *args):
+        raise Timeout.Timeout()
+
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -24,28 +41,29 @@ def main():
     button = aiy.voicehat.get_button()
 
     with aiy.audio.get_recorder():
-        #aiy.audio.play_wave('/home/pi/Pycham/0000_test/voice_files/voice_power.wav')
         play_sound.playAudioText('power on')
         while True:
             access_token = '66665YBMQQL64GNF6PJV7OGWBFBQGI56'
             client = Wit(access_token)
 
-            #aiy.audio.play_wave('/home/pi/Pycham/0000_test/voice_files/voice_pre.wav')
             play_sound.playAudioText('press button and speak')
             button.wait_for_press()
 
+            print("hello1")
             text, audio = assistant.recognize()
+
 
             if text:
                 logger.info('recognize text is : %s ',text)
                 try:
-                    resp = client.message(text)
-                    logger.info(resp)
-                    json_manager.saveJson(resp)
-                    json_manager.decodeJson()
+                    with Timeout(3):
+                        resp = client.message(text)
+                        logger.info(resp)
+                        json_manager.saveJson(resp)
+                        json_manager.decodeJson()
+                except Timeout.Timeout:
+                    print('timeout')
                 except:
-                    #aiy.audio.play_wave('/home/pi/Pycham/0000_test/voice_files/voice_don.wav')
-                    play_sound.playAudioText('error')
                     print('error resp')
 
 if __name__ == '__main__':
