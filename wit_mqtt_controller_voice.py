@@ -26,7 +26,7 @@ def main():
     button = aiy.voicehat.get_button()
 
     with aiy.audio.get_recorder():
-        path = '/home/pi/Pycham/0000_test/mp3_files/voice_power.wav'
+        path = '/home/pi/Pycham/0000_test/voice_files/voice_power.wav'
         aiy.audio.play_wave(path)
         while True:
             access_token = '66665YBMQQL64GNF6PJV7OGWBFBQGI56'
@@ -34,7 +34,7 @@ def main():
             print('Press the button and speak')
             button.wait_for_press()
 
-            path = '/home/pi/Pycham/0000_test/mp3_files/voice_pre.wav'
+            path = '/home/pi/Pycham/0000_test/voice_files/voice_pre.wav'
             aiy.audio.play_wave(path)
 
             logger.info('Listening.....')
