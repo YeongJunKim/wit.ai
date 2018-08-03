@@ -4,7 +4,7 @@ import signal
 import time
 
 
-class TImeout():
+class Timeout():
     class Timeout(Exception):
         pass
     def __init__(self, sec):
@@ -15,7 +15,7 @@ class TImeout():
     def __exit__(self, *args):
         signal.alarm(0)
     def raise_timeout(self, *args):
-        raise TImeout.Timeout()
+        raise Timeout.Timeout()
 
 from wit import Wit
 
@@ -35,11 +35,13 @@ def main():
         if text:
             logger.info('recognize text is : %s ',text)
             try:
-                with TImeout(3):
+                with Timeout(3):
                     resp = client.message(text)
                     logger.info(resp)
                     json_manager.saveJson(resp)
                     json_manager.decodeJson()
+            except Timeout.Timeout:
+                print('timeout')
             except:
                 print('error resp')
 
