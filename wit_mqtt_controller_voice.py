@@ -26,16 +26,14 @@ def main():
     button = aiy.voicehat.get_button()
 
     with aiy.audio.get_recorder():
-        path = '/home/pi/Pycham/0000_test/voice_files/voice_power.wav'
-        aiy.audio.play_wave(path)
+        aiy.audio.play_wave('/home/pi/Pycham/0000_test/voice_files/voice_power.wav')
         while True:
             access_token = '66665YBMQQL64GNF6PJV7OGWBFBQGI56'
             client = Wit(access_token)
             print('Press the button and speak')
             button.wait_for_press()
 
-            path = '/home/pi/Pycham/0000_test/voice_files/voice_pre.wav'
-            aiy.audio.play_wave(path)
+            aiy.audio.play_wave('/home/pi/Pycham/0000_test/voice_files/voice_pre.wav')
 
             logger.info('Listening.....')
             text, audio = assistant.recognize()
@@ -51,8 +49,7 @@ def main():
                     json_manager.saveJson(resp)
                     json_manager.decodeJson()
                 except:
-                    path = '/home/pi/Pycham/0000_test/voice_files/voice_don.wav'
-                    aiy.audio.play_wave(path)
+                    aiy.audio.play_wave('/home/pi/Pycham/0000_test/voice_files/voice_don.wav')
                     print('error resp')
 
 if __name__ == '__main__':
