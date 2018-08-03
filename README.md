@@ -1,16 +1,24 @@
 # api_wit_ai
 
-support raspberry pi
+
+###### **support raspberry pi zero w board with AIY kit.**
+
+### install
+
+#### 1. install AIY-kit.
+```https://aiyprojects.withgoogle.com/voice/```
 
 
-1. install AIY-Kit https://aiyprojects.withgoogle.com/voice/
+#### 2. install pywit.
+```https://github.com/wit-ai/pywit```
 
-2. install pywit. url https://github.com/wit-ai/pywit
 
 
-you need access token.
-my token for modi-iot : "66665YBMQQL64GNF6PJV7OGWBFBQGI56"
 
-example : wit_mqtt_controller.py
+
+#### 3. access token.
+you can validate token in https://api.wit.ai
+
+**example : wit_mqtt_controller.py or wit_mqtt_controller_voice.py**
 
 
