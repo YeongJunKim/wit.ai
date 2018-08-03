@@ -3,7 +3,6 @@ import json_manager
 import signal
 import time
 
-
 class Timeout():
     class Timeout(Exception):
         pass
