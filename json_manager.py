@@ -82,9 +82,6 @@ def decodeJson():
 
         iot_manager.taskManager(getintent,getthings,getthings_what,getthings_action,getthings_level,getnumber)
 
-    #byte_response=data.read()
-    #byte_response=data.replace('\xc2\xa0',' ')
-
     #print(data.get("entities", 0))
     #print(data.keys())
 def main():

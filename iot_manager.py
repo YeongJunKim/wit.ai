@@ -1,4 +1,3 @@
-
 import mqtt_manager
 
 def tvManager(things_what, things_action, number):
