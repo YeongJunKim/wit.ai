@@ -51,7 +51,7 @@ def main():
                     json_manager.saveJson(resp)
                     json_manager.decodeJson()
                 except:
-                    path = '/home/pi/Pycham/0000_test/mp3_files/voice_don.wav'
+                    path = '/home/pi/Pycham/0000_test/voice_files/voice_don.wav'
                     aiy.audio.play_wave(path)
                     print('error resp')
 
