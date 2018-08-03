@@ -1,6 +1,5 @@
 #!/usr/bin/env python3.5
 import sys
-import mqtt_manager
 
 sys.path.insert(0, './home/pi/AIY-projects-python/src/aiy')
 
