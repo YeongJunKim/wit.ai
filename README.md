@@ -8,7 +8,7 @@ https://aiyprojects.withgoogle.com/voice/
 ###### ```pywit``` is the Python SDK for wit.ai.
 https://github.com/wit-ai/pywit
 
-#### 3. install mqtt-paho
+#### 3. install mqtt-paho.
 1. ```~ $ sudo pip install mqtt-paho```
 
 #### 4. install this.

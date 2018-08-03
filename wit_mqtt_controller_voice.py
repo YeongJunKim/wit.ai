@@ -40,7 +40,7 @@ def main():
     with aiy.audio.get_recorder():
         play_sound.playAudioText('power on')
         while True:
-            access_token = '66665YBMQQL64GNF6PJV7OGWBFBQGI56'
+            access_token = 'access_token'
             client = Wit(access_token)
 
             play_sound.playAudioText('press button and speak')
