@@ -36,9 +36,36 @@ python3.5 {$FILE PATH}
 ```~ $ reboot```
 
 
-######.
 #### access token.
 you can validate token in https://api.wit.ai
+
+check **access_token.**
+```python
+def main():
+    while True:
+        access_token = '66665YBMQQL64GNF6PJV7OGWBFBQGI56'
+        client = Wit(access_token)
+        logger.info('Listening.....')
+        text = input()
+
+        if text:
+            logger.info('recognize text is : %s ',text)
+            try:
+                with Timeout(3):
+                    resp = client.message(text)
+                    logger.info(resp)
+                    json_manager.saveJson(resp)
+                    json_manager.decodeJson()
+            except Timeout.Timeout:
+                print('timeout')
+            except:
+                print('error resp')
+
+if __name__ == '__main__':
+    main()
+```
+
+
 #### examples :
 **example : wit_mqtt_controller.py**  
 or  
