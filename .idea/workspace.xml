@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="118e1431-316f-4672-a0fa-0bcbc2677cbf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mqtt_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/mqtt_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wit_mqtt_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/wit_mqtt_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wit_mqtt_controller_voice.py" beforeDir="false" afterPath="$PROJECT_DIR$/wit_mqtt_controller_voice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/play_wav.py" beforeDir="false" afterPath="$PROJECT_DIR$/play_wav.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mqtt_manager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mqtt_manager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mqtt_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="228">
+              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -73,15 +69,19 @@
       <file leaf-file-name="wit_mqtt_controller_voice.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wit_mqtt_controller_voice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
+            <state relative-caret-position="323">
+              <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="29" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="play_wav.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="play_wav.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/play_wav.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="json_manager.py" pinned="false" current-in-tab="false">
@@ -193,6 +193,7 @@
         <option value="$PROJECT_DIR$/wit_mqtt_controller.py" />
         <option value="$PROJECT_DIR$/wit_mqtt_controller_voice.py" />
         <option value="$PROJECT_DIR$/mqtt_manager.py" />
+        <option value="$PROJECT_DIR$/play_wav.py" />
       </list>
     </option>
   </component>
@@ -750,9 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/play_wav.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="uml://JavaScript-modules-diagram/C:/Users/COLSON/Desktop/workspace/git/wit">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -780,6 +778,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mqtt_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wit_mqtt_controller_voice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wit_mqtt_controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -790,17 +802,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wit_mqtt_controller_voice.py">
+    <entry file="file://$PROJECT_DIR$/play_wav.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mqtt_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
