@@ -1,8 +1,6 @@
 import json
 import iot_manager
 from pprint import pprint
-from collections import OrderedDict
-from unittest import getTestCaseNames
 
 def saveJson(resp):
     with open('react.json', 'w', encoding="utf-8") as make_file:
