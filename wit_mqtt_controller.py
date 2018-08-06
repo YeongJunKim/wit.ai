@@ -1,8 +1,12 @@
+# autor : colson (Yeong Jun Kim)
+# https://www.github.com/YeongJunKim
+
 import logging
+import log_manager
 import json_manager
 import signal
 
-class Timeout():
+class Timeout:
     class Timeout(Exception):
         pass
     def __init__(self, sec):
@@ -17,31 +21,30 @@ class Timeout():
 
 from wit import Wit
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="[%(asctime)s] %(levelname)s:%(name)s:%(message)s"
-)
-logger = logging.getLogger('INFO')
-
 def main():
+    logger = log_manager.MyLogger(level = logging.INFO, get = "MAIN")
+    logger.add_file_stream_handler('logging.log')
     while True:
-        access_token =  'access_token'
+        access_token = 'access_token'
         client = Wit(access_token)
-        logger.info('Listening.....')
+        logger.logger.info('Listening.....')
         text = input()
-
         if text:
-            logger.info('recognize text is : %s ',text)
             try:
-                with Timeout(3):
+                with Timeout(4):
                     resp = client.message(text)
-                    logger.info(resp)
-                    json_manager.saveJson(resp)
-                    json_manager.decodeJson()
+                    json = json_manager.ManageJson()
+                    json.save_json(resp)
+                    json.decode_json()
+                    logger.logger.info('%s ',text)
+                    logger.logger.info(resp)
+
             except Timeout.Timeout:
-                print('timeout')
+                logger.logger.info('timeout')
             except:
-                print('error resp')
+                logger.logger.info('error')
+
+
 
 if __name__ == '__main__':
     main()
