@@ -12,32 +12,39 @@ https://aiyprojects.withgoogle.com/voice/
 https://github.com/wit-ai/pywit
 
 #### 3. install mqtt-paho.
-
-1. ```~ $ apt-get install python3-pip```
-2. ```~ $ pip3 install mqtt-paho```
+```
+1. ~ $ apt-get install python3-pip
+2. ~ $ pip3 install mqtt-paho
+```
 
 #### 4. install this.
-1. ```~ $ pip3 install urllib3```
-2. ```~ $ pip3 install pyopenssl```
-3. ```~ $ pip3 install ndg-httpsclient```
-4. ```~ $ pip3 install pyasn1```
-5. ```~ $ pip3 install requests[security]```
+```
+1. ~ $ pip3 install urllib3
+2. ~ $ pip3 install pyopenssl
+3. ~ $ pip3 install ndg-httpsclient
+4. ~ $ pip3 install pyasn1
+5. ~ $ pip3 install requests[security]
+```
 
-#### when you run shell script at startup.
-1. ```~ $ cd /etc/profile.d```
-2. ```~ $ nano {$filename}.sh```
-3.
+#### when you run script at startup.
+```
+1. ~ $ cd /etc/profile.d
+2. ~ $ nano {$FILE_NAME}.sh
+```
 ```
 #!/bin/bash 
 
-python3.5 {$FILE PATH}
- ```
+python3.5 {$FILE PATH}.{$FILE_NAME}.py
+```
+ 
 ###### reboot
-```~ $ reboot```
+```
+~ $ reboot
+```
 
 
 #### access token.
-you can validate token in https://api.wit.ai
+#####- you can validate token in https://api.wit.ai
 
 check **access_token.**
 ```python
