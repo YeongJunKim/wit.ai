@@ -1,7 +1,6 @@
 import logging
 import json_manager
 import signal
-import time
 
 class Timeout():
     class Timeout(Exception):
@@ -26,7 +25,7 @@ logger = logging.getLogger('INFO')
 
 def main():
     while True:
-        access_token = 'access_token'
+        access_token =  'access_token'
         client = Wit(access_token)
         logger.info('Listening.....')
         text = input()
