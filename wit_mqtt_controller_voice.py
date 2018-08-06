@@ -10,7 +10,6 @@ import play_sound
 from wit import Wit
 
 import signal
-import time
 
 class Timeout():
     class Timeout(Exception):
@@ -40,7 +39,7 @@ def main():
     with aiy.audio.get_recorder():
         play_sound.playAudioText('power on')
         while True:
-            access_token = 'access_token'
+            access_token = '66665YBMQQL64GNF6PJV7OGWBFBQGI56'
             client = Wit(access_token)
 
             play_sound.playAudioText('press button and speak')
