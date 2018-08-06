@@ -1,3 +1,6 @@
+# autor : colson (Yeong Jun Kim)
+# https://www.github.com/YeongJunKim
+
 import sys
 sys.path.insert(0, './home/pi/AIY-projects-python/src/aiy')
 import aiy.audio
